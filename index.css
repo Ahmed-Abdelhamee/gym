@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+
+}
+[class*="col-"]{
+    float: left;
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    [class*="col-"]{
+        float: left;
+        width: 100%;
+    }
+    .gym-promo .gym-title{
+        right: 3%;
+    }
+    .gym-promo .gym-title2{
+        right: 11.5%;
+    }
+    .col-12 .gym-promo {
+        height: 550px;
+    }
+    .align-items-start{
+        display: block;
+    }
+
+    .row .online-training{
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+    .online-training button{
+        margin:0px;
+    }
+    .col-12.VIP-training-Course{
+        justify-content: center;
+    }
+    .vip-package-title .vip-text{
+        display: none;
+    }
+}
+@media screen and (max-width:769px) {
+    .online-training-container .container{
+        padding: 0px;
+        margin: 0px;
+        display: contents;
+    }
+}
+/* --------------------------- header ---------------------------- */
+body{
+    overflow-x: hidden;
+}
+.navbar-brand{
+    font-family: 'Rakkas', cursive;
+    font-size: 22px;
+    text-transform: capitalize;
+    word-spacing: 4px;
+}
+.nav-link {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    margin-left: 4px;
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
+.active,
+.nav-link:hover{
+    background-color: brown;
+    border-radius: 3px;
+}
+button.navbar-toggler{
+    margin-bottom: 7px;
+}
+/* ---------------------------- gym-promo ---------------------------- */
+.gym-promo{
+    position: relative;
+    z-index: 2;
+    height: 670px;
+}
+.gym-poster{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+}
+.gym-title,
+.gym-title2{
+    position: absolute;
+    color: white;
+    top: 330px;
+    right: 8%;
+    font-size: 4.5vw;
+    text-shadow: 0px 0px 15px black;
+    background-color: #0000008f;
+    padding: 10px 35px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+.gym-title2{
+    top: 480px;
+    font-size: 2.8vw;
+    right: 15.5%;
+}
+
+/* ---------------------------- online-gym --------------------------- */
+.online-training-container{
+    background-color:#F2F2F2;
+    padding-bottom: 100px;
+}
+.online-training{
+    padding: 25px;
+}
+.online-training .package{
+    position: relative;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 10px;
+    padding: 0px;
+    background-color: white;
+    box-shadow: 0px 0px 5px white;
+}
+.online-training-title{
+    text-align: center;
+    padding: 25px;
+    margin: 25px;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: #000000b3;
+    border-radius: 0px 30px;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+}
+.online-training img{
+    width: 100%;
+    height: 230px;
+    float: left;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.online-training .duration{
+    margin-top: 0;
+    text-align: center;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.online-training button{
+    width: 100%;
+    padding: 11px;
+    border: none;
+    box-shadow: 0px 0px 5px #c7c7c7;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #4e4e4e;
+    background: #d1d1d1;
+    transition: all .5s;
+}
+.online-training button:hover{
+    background-color: #005b7e;
+    color: #f8f9fa;
+}
+.online-training ul{
+    list-style: none;
+    padding: 10px;
+}
+.online-training ul li{
+    font-size: 12px;
+    color: #121212c7;
+    text-align: left;
+    padding-left: 6%;
+    line-height: 22px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+
+/* --------------------------------------------------------------------- */
+
+
+.VIP-training-Course{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.VIP-training-Course .vip-package{
+        width: 265px;
+        padding-top: 30px;
+        margin-right: 1%;
+}
+.VIP-training-Course img{
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    filter: brightness(0.8);
+    z-index: -1;
+}
+.vip-text{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    margin-left: 10px;
+    text-shadow: 0px 0px 32px orange;
+}
+.VIP-training-Course .duration{
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffc800;
+    text-shadow: 0px 0px 25px;
+    background-color: #00000017;
+    margin: 15px;
+}
+.VIP-training-Course ul{
+    list-style: none;
+    padding: 5px;
+}
+.VIP-training-Course ul li{
+    color: white;
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 10px;
+}
+.VIP-training-Course button{
+    cursor: pointer;
+    background-color: darkorange;
+    border: none;
+    margin: 15px auto;
+    padding: 12.5px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: capitalize;
+    width: 90%;
+    min-width: 100px;
+    margin-left: 5%;
+    font-size: 13px;
+}
+
