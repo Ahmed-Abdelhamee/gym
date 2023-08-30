@@ -2,10 +2,10 @@
     box-sizing: border-box;
     transition: all .8s;
 }
-/* [class*="col-"]{
-    float: left;
-    width: 100%;
-} */
+
+a{
+    text-decoration: none;
+}
 
 @media screen and (max-width:850px) and (min-width:600px){
     .container{
@@ -27,6 +27,9 @@
         font-size: 11px;
         line-height: 18px;
     }
+    .training-from-home-container .online-training{
+        width: 50%;
+    }
     .gym-food-container .row .online-training ul{
         padding: 0px;
     }
@@ -35,6 +38,9 @@
         padding-left: 3px;
         font-size: 10px;
         line-height: 19px;
+    }
+    .vip-package-title{
+        display: none;
     }
 }
 @media screen and (max-width:600px) {
@@ -48,6 +54,15 @@
     .online-training-container .online-training ul li,
     .gym-food-container .online-training .package ul li  {
         font-size: 15px;
+    }
+    .online-training-container .online-training {
+        margin-bottom: 15px;
+    }
+    .online-training-container .online-training-title{
+        margin-top: 15px;
+    }
+    .online-training-container .online-training  .package{
+        padding: 15px;
     }
     .gym-promo .gym-title{
         right: 6%;
@@ -81,6 +96,7 @@
         font-size: 15px;
         text-shadow: 0px 0px 5px black;
     }
+    
 }
 @media screen and (max-width:769px) {
     .online-training-container .container{
@@ -88,8 +104,36 @@
         margin: 0px;
         display: contents;
     }
+    .vip-package-title{
+        display: none;
+    }
+    .VIP-training-Course .vip-package {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        background: #0000001f;
+    }
 }
-
+@media screen and (max-width:475px) {
+    .VIP-training-Course{
+        height: 490px;
+    }
+    .VIP-training-Course .vip-package {
+        width: 265px;
+        position: absolute;
+        z-index: 2;
+        top: 25px;
+        left: calc(50% - 130px);
+    }
+    .VIP-training-Course .col img{
+        position: absolute;
+        height: 470px;
+        filter: brightness(0.6);
+        top: -30px;
+        width: 80%;
+        left: 10%;
+    }
+}
 
 
 
@@ -155,8 +199,8 @@ button.navbar-toggler{
 }
 /* -------------------------------------- online-gym -------------------------------------- */
 .container{
-    padding-bottom: 100px;
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 120px;
 }
 .online-training-container{
     background-color:#F7F7F7;
@@ -180,7 +224,6 @@ button.navbar-toggler{
 .online-training-title{
     text-align: center;
     padding: 25px;
-    margin: 25px;
     margin-top: 0px;
     font-size: 19px;
     font-weight: 800;
@@ -205,6 +248,12 @@ button.navbar-toggler{
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
+.col-sm-5.online-training .package img{
+    height: 320px;
+}
+.stand-alone img{
+    height: 320px;
+}
 .online-training .duration{
     margin-top: 0;
     text-align: center;
@@ -224,6 +273,7 @@ button.navbar-toggler{
     color: #4e4e4e;
     background: #d1d1d1;
     border-radius: 5px;
+    font-family: 'Lemonada', cursive;
 }
 .online-training ul{
     list-style: none;
@@ -244,18 +294,16 @@ button.navbar-toggler{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: black;
 }
 .VIP-training-Course .vip-package{
         width: 265px;
-        padding-top: 30px;
         margin-right: 1%;
 }
 .VIP-training-Course img{
-    position: absolute;
-    height: 600px;
+    height: 490px;
     width: 100%;
-    filter: brightness(0.8);
-    z-index: -1;
+    filter: brightness(0.9);
 }
 .vip-text{
     color: white;
@@ -334,7 +382,8 @@ button.navbar-toggler{
 }
 /* ------------------------------------------  gym-food -------------------------------------- */
 .gym-food-container{
-    background-color: #0000008c;
+    background-color: #00000017;
+    background-image: linear-gradient(100deg , #ededed  ,#00000017);
 }
 .gym-food-title{
     background-color: #4c4b4b;
@@ -374,6 +423,9 @@ button.navbar-toggler{
 }
 
 /* --------------------------------------  program-without-follow ------------------------------ */
+.program-without-follow{
+    background-color: white;
+}
 .program-without-follow-title{
     margin: 20px;
     width: fit-content;
@@ -389,18 +441,71 @@ button.navbar-toggler{
     box-shadow: 0px 0px 15px gray;
     transform: translateY(-5px);
 }
+/* ----------------------------------------- sponsor ----------------------------------------- */
+.sponsor{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.sponsor .online-training .package{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+.sponsor .online-training .package img{
+    height: 220px;
+}
+.sponsor .online-training .package .online-training-title{
+    color: #970384;
+}
+.sponsor .online-training .package a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    color: #970384;
+}
 /* ---------------------------------------- new packages -------------------------------------- */
 .new-packages-container{
-    background-color: #0000008c;
+    background-color: #00000017;
 }
 .new-packages-container .online-training .package{
     background-color: rgba(245, 245, 245, 0.934);
 }
 
-
-
-/* -------------------------------------- contact-us -------------------------------------- */
+/* ------------------------------- contact-us ---------------------------------- */
 .contact-us{
+    position: relative;
+    height: 500px;
+}
+.contact-us-img{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.contact-us .contact-text{
+    padding: 30px;
+    padding-top: 160px;
+    padding-left: 9.5%;
+    font-size: 27px;
+    color: aliceblue;
+    font-weight: 600;
+}
+p.whats{
+    padding-top: 0;
+    padding-left: 13%;
+}
+.bi-whatsapp{
+    font-size: 50px;
+    color: green;
+    background-color: #fdfdfd;
+    padding: 5px;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* -------------------------------------- Footer -------------------------------------- */
+.Footer{
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 40px;
@@ -409,13 +514,26 @@ button.navbar-toggler{
     margin: 0;
     font-weight: 400;
 }
-.contact-us ul{
+.Footer ul{
     list-style: none;
 }
 
-
-
-
+/* ----------------------------------------- static whatsApp ----------------------------------- */
+.static-whatsApp{
+    position: fixed;
+    bottom: 5px;
+    right: 14px;
+    z-index: 4;
+}
+.static-whatsApp .bi-whatsapp{
+    font-size: 31px;
+    color: green;
+    background-color: #fdfdfd;
+    padding: 7px;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 
