@@ -7,7 +7,7 @@ a{
     text-decoration: none;
 }
 
-@media screen and (max-width:850px) and (min-width:600px){
+@media screen and (max-width:901px) and (min-width:600px){
     .container{
         margin: 0px;
         display: contents;
@@ -48,6 +48,13 @@ a{
         float: left;
         width: 100%;
     }
+    .static-loading .loading-text{
+        font-size: 25px;
+    }
+    div.static-loading img{
+        width: 40px;
+        margin-right: 2%;
+    }
     .online-training-container{
         padding: 0px 10px;
     }
@@ -66,15 +73,15 @@ a{
     }
     .gym-promo .gym-title{
         right: 6%;
-        top: 290px;
+        top: 220px;
     }
     .gym-promo .gym-title2{
-        right: 13.5%;
-        top: 380px;
+        right: 14%;
+        top: 300px;
         padding: 10px 23px;
     }
     .col-12 .gym-promo {
-        height: 550px;
+        height: 430px;
     }
     .align-items-start{
         display: block;
@@ -99,6 +106,9 @@ a{
     .contact-us-container .contact-us{
         height: 400px;
         margin-top: 40px;
+    }
+    .sponsor .online-training .package a img {
+        height: 150px;
     }
 }
 @media screen and (max-width:769px) {
@@ -140,7 +150,53 @@ a{
 
 
 
-
+/* ----------------------------------------- static loading ----------------------------------- */
+.static-loading{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-text{
+    font-size: 30px;
+    color: #0675d5;
+    padding-top: 10px;
+}
+.static-loading img{
+    width: 70px;
+    border-radius: 50%;
+    margin-right: .7%;
+    animation-name: loadingSpin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-timing-function: linear;
+}
+/* ----------------------------------------- static whatsApp ----------------------------------- */
+.static-whatsApp{
+    position: fixed;
+    bottom: 5px;
+    right: 14px;
+    z-index: 4;
+}
+.static-whatsApp .bi-whatsapp{
+    font-size: 31px;
+    color: green;
+    background-color: #fdfdfd;
+    padding: 7px;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.bi-whatsapp:hover{
+    box-shadow: 0px 0px 35px white;
+}
 
 /* --------------------------------------- header --------------------------------------- */
 body{
@@ -159,7 +215,7 @@ body{
     font-family: 'El Messiri', sans-serif;
     font-size: 12px;
     padding: 10px;
-    margin-left: 4px;
+    margin-left: 1px;
 }
 .navbar-collapse{
     flex-grow: 0;
@@ -199,9 +255,9 @@ button.navbar-toggler{
     padding-bottom: 15px;
 }
 .gym-title2{
-    top: 480px;
+    top: 455px;
     font-size: 2.6vw;
-    right: 15.5%;
+    right: 16.5%;
 }
 /* -------------------------------------- online-gym -------------------------------------- */
 .container{
@@ -243,6 +299,7 @@ button.navbar-toggler{
 .online-training button:hover{
     background-color: #000000b5;
     color: #f8f9fa;
+    box-shadow: 0px 0px 15px #a3a3a3;
 }
 .online-training img{
     width: 100%;
@@ -398,6 +455,8 @@ button.navbar-toggler{
     padding: 15px 40px;
     font-weight: 700;
     text-transform: capitalize;
+    width: 96%;
+    margin-left: 2%;
 }
 .gym-food-title:hover{
     background-color: whitesmoke;
@@ -502,6 +561,10 @@ button.navbar-toggler{
     color: aliceblue;
     font-weight: 600;
 }
+.contact-us .contact-text:hover {
+    color: #1b9599;
+    text-shadow: 0px 0px 5px white;
+}
 p.whats{
     padding-top: 0;
     padding-left: 13%;
@@ -530,26 +593,16 @@ p.whats{
     list-style: none;
 }
 
-/* ----------------------------------------- static whatsApp ----------------------------------- */
 
-.static-whatsApp{
-    position: fixed;
-    bottom: 5px;
-    right: 14px;
-    z-index: 4;
+/* -------------------------------------- Footer -------------------------------------- */
+@keyframes loadingSpin {
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(361deg);
+    }
 }
-.static-whatsApp .bi-whatsapp{
-    font-size: 31px;
-    color: green;
-    background-color: #fdfdfd;
-    padding: 7px;
-    border-radius: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-
-
 
 
 
