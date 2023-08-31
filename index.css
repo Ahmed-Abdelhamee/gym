@@ -110,6 +110,9 @@ a{
     .sponsor .online-training .package a img {
         height: 150px;
     }
+    .sponsor .online-training .package a .sponsor-text {
+        font-size: 10px;
+    }
 }
 @media screen and (max-width:769px) {
     .online-training-container .container{
